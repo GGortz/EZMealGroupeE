@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">EZMealGroupeE</string>
+    <string name="inscription">Inscription</string>
+    <string name="login2">Login :</string>
+    <string name="mot_de_passe">Mot de passe :</string>
+    <string name="r_peter_le_mot_de_passe">Répéter le mot de passe : </string>
+    <string name="jour_de_naissance">Jour de naissance :</string>
+    <string name="mois_de_naissance">Mois de naissance :</string>
+    <string name="annee_de_naissance">Année de naissance :</string>
+    <string name="pays">Pays :</string>
+    <string name="ville">Ville :</string>
+    <string name="enter">Enregistrer</string>
+    <string name="sexe">Sexe :</string>
+
+    <string-array name="SpinSex">
+        <item>Homme</item>
+        <item>Femme</item>
+    </string-array>
+
 </resources>
