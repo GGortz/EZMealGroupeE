@@ -1,7 +1,7 @@
 package be.lsinf1225.ezmealgroupee;
 
 /**
- * Created by Gaetan on 30/06/2017.
+ * Created by Gaetan on 22/06/2017.
  */
 
 public class objetRecette {

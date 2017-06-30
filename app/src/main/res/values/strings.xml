@@ -11,6 +11,8 @@
     <string name="ville">Ville :</string>
     <string name="enter">Enregistrer</string>
     <string name="sexe">Sexe :</string>
+    <string name="nom_appli">EZMeal</string>
+    <string name="connexion">Connexion</string>
 
     <string-array name="SpinSexe">
         <item>Homme</item>
