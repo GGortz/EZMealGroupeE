@@ -145,7 +145,8 @@
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
                 tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="0dp" />
+                tools:layout_editor_absoluteY="0dp"
+                android:entries="@array/SpinSexe"/>
 
 
             <TextView

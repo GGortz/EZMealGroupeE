@@ -12,7 +12,7 @@
     <string name="enter">Enregistrer</string>
     <string name="sexe">Sexe :</string>
 
-    <string-array name="SpinSex">
+    <string-array name="SpinSexe">
         <item>Homme</item>
         <item>Femme</item>
     </string-array>
