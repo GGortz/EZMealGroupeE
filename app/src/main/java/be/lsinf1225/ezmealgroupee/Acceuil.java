@@ -15,11 +15,11 @@ public class Acceuil extends AppCompatActivity {
 
    public void onBtnClick(View view){
        if(view.getId()==R.id.BtnConnexion){
-           Intent connexion = new Intent();
+           Intent connexion = new Intent(Acceuil.this, Connexion.class);
            startActivity(connexion);
        }
        if(view.getId()==R.id.BtnInscription){
-           Intent inscription = new Intent();
+           Intent inscription = new Intent(Acceuil.this, Inscription.class);
            startActivity(inscription);
        }
    }

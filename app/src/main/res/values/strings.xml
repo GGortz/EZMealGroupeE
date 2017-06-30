@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EZMealGroupeE</string>
+    <string name="app_name">EZMeal</string>
     <string name="inscription">Inscription</string>
     <string name="login2">Login :</string>
     <string name="mot_de_passe">Mot de passe :</string>
@@ -13,6 +13,17 @@
     <string name="sexe">Sexe :</string>
     <string name="nom_appli">EZMeal</string>
     <string name="connexion">Connexion</string>
+    <string name="login">Nom d\'utilisateur :</string>
+    <string name="Mcompte">Compte</string>
+    <string name="Comment">Commentaires :</string>
+    <string name="aRecEtape">Étapes :</string>
+    <string name="aRecIng">Ingrédients :</string>
+    <string name="aRecComp">Complexité :</string>
+    <string name="aRecNmbreCouv">Couverts :</string>
+    <string name="aRecTmpscuisson">Temps de cuisson :</string>
+    <string name="aRecPrix">Prix :</string>
+    <string name="aRecDescr">Description :</string>
+
 
     <string-array name="SpinSexe">
         <item>Homme</item>

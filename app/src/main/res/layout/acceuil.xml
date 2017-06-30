@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/fond"
     tools:context="be.lsinf1225.ezmealgroupee.Acceuil">
 
     <TextView
@@ -13,6 +14,9 @@
         android:text="@string/nom_appli"
         android:textSize="50dp"
         app:layout_constraintRight_toRightOf="parent"
+        android:typeface="monospace"
+        android:textColor="#13363b"
+        android:textStyle="bold"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
