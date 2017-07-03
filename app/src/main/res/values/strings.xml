@@ -23,6 +23,10 @@
     <string name="aRecTmpscuisson">Temps de cuisson :</string>
     <string name="aRecPrix">Prix :</string>
     <string name="aRecDescr">Description :</string>
+    <string name="mod_mdp">Modification du mot de passe</string>
+    <string name="ancien_mot_de_passe">Ancien mot de passe :</string>
+    <string name="nouveau_mot_de_passe">Nouveau mot de passe :</string>
+    <string name="modifier">Modifier</string>
 
 
     <string-array name="SpinSexe">

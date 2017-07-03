@@ -19,6 +19,11 @@
         <activity android:name=".Inscription"></activity>
         <activity android:name=".Connexion"></activity>
         <activity android:name=".Menu"></activity>
+        <activity android:name=".RechercheSimple"></activity>
+        <activity android:name=".RechercheAvancee"></activity>
+        <activity android:name=".Profil"></activity>
+        <activity android:name=".ModifierMDP"></activity>
+        <activity android:name=".SupprimerCompte"></activity>
     </application>
 
 </manifest>
