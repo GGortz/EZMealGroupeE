@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.EditText;
-import android.view.View;
 import android.content.Intent;
 
 /**
@@ -40,7 +39,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
     private void Login(){
         BaseDeDonnees bdd = new BaseDeDonnees(this);
 
-        EditText inputLogin = (EditText)findViewById(R.id.txtLogin);
+        EditText inputLogin = (EditText)findViewById(R.id.profilLogin);
         EditText inputMDP = (EditText) findViewById(R.id.txtPassword);
 
         login = inputLogin.getText().toString();

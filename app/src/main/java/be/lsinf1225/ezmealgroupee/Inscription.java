@@ -4,23 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
-/**
- * Created by Gaetan on 22/06/2017.
- */
 
 public class Inscription extends AppCompatActivity implements View.OnClickListener{
     private Button btnEnregistrer;
-
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -37,9 +27,8 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view){
-        if(view.getId()==R.id.inscriptionEnregistrer){   //Quand on clique sur le bouton enregistrer
+        if(view.getId()==R.id.inscriptionEnregistrer)   //Quand on clique sur le bouton enregistrer
             this.Sinscrire();
-        }
     }
 
     private void Sinscrire(){
