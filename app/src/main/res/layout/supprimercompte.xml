@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,37 +8,27 @@
     tools:context="Inscription">
 
 
-    <TextView
-        android:id="@+id/lblInscription"
-        android:layout_width="368dp"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarsupprimercompte"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="@string/supp_compte"
-        android:textSize="25dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="373dp"
-        android:layout_height="428dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblInscription"
-        app:layout_constraintVertical_bias="0.529">
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/toolbarsupprimercompte">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,11 +39,14 @@
 
             <TextView
                 android:id="@+id/inscritpionLogin"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/mot_de_passe"
                 android:textSize="20dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:typeface="monospace"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -71,16 +64,21 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:layout_marginTop="8dp"
                 android:src="@mipmap/code" />
 
 
             <TextView
                 android:id="@+id/textView14"
-                android:layout_width="177dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_weight="0.38"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:text="Code sur l'image"
                 android:textSize="20dp"
+                android:typeface="monospace"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -103,13 +101,13 @@
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="40dp"
                 android:text="Supprimer"
+                android:backgroundTint="#48d6e6"
                 android:textSize="25dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
 
-
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

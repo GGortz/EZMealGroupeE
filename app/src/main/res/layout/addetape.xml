@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarajoutetape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:text="Etape : "
+                android:textSize="20dp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/addetape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ems="16" />
+
+            <Button
+                android:id="@+id/btnaddetape"
+                android:layout_width="wrap_content"
+                android:backgroundTint="#48d6e6"
+                android:textSize="20dp"
+                android:typeface="monospace"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ajouter une etape" />
+
+            <Button
+                android:id="@+id/btnnext2"
+                android:layout_width="223dp"
+                android:backgroundTint="#48d6e6"
+                android:textSize="20dp"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_gravity="center"
+                android:text="Enregistrer" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRecette">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbajoutrecette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbajoutrecette">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtajouttitre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:text="Titre : " />
+
+            <EditText
+                android:id="@+id/ajoutTitre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+
+            <TextView
+                android:id="@+id/txtajoutdescription"
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:text="Description (max 250 caractères) : " />
+
+            <EditText
+                android:id="@+id/ajoutDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajoutPrix"
+                    android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:typeface="monospace"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prix : " />
+
+                <Spinner
+                    android:id="@+id/ajoutCout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/SpinCout" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajoutType"
+                    android:layout_width="match_parent"
+                    android:typeface="monospace"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Type : " />
+
+                <Spinner
+                    android:id="@+id/ajoutType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/SpinType" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajoutComplexite"
+                    android:typeface="monospace"
+                    android:layout_width="match_parent"
+                    android:textSize="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Complexité : " />
+
+                <Spinner
+                    android:id="@+id/ajoutDifficulte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/SpinDifficulte" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajouttcuiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:typeface="monospace"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:text="Temps de cuisson : " />
+
+                <EditText
+                    android:id="@+id/ajoutTcuiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajouttprep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:typeface="monospace"
+                    android:layout_weight="1"
+                    android:text="Temps de préparation : " />
+
+                <EditText
+                    android:id="@+id/ajoutTprep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtajoutnbrcouv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:typeface="monospace"
+                    android:layout_weight="1"
+                    android:text="Nombre de couverts : " />
+
+                <EditText
+                    android:id="@+id/ajoutNbrcouv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAjoutEnregistrer"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:typeface="monospace"
+                android:backgroundTint="#48d6e6"
+                android:layout_height="wrap_content"
+                android:text="Enregistrer" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

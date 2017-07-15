@@ -3,6 +3,7 @@ package be.lsinf1225.ezmealgroupee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +14,7 @@ import android.widget.Toast;
  */
 
 public class ModifierMDP extends AppCompatActivity implements View.OnClickListener{
-
+    Toolbar toolbarModifierMDP;
     private Button btnChange;
     private String login;
     private String mdp1;
@@ -23,17 +24,14 @@ public class ModifierMDP extends AppCompatActivity implements View.OnClickListen
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.modifiermdp);
-
-        Bundle extras = getIntent().getExtras();
-        if(extras != null)
-            login = extras.getString("cleLogin");
+        login=Connexion.getUtilisateuractuel().getLogin();
+        toolbarModifierMDP = (Toolbar) findViewById(R.id.toolbarmodifiermdp);
+        toolbarModifierMDP.setTitle("Modification du mot de passe");
 
         Ajout_Listener_Bouttons();
-
     }
 
     private void Ajout_Listener_Bouttons(){
-
         btnChange = (Button) findViewById(R.id.btnChangeMDP);
         btnChange.setOnClickListener(this);
     }
@@ -45,7 +43,6 @@ public class ModifierMDP extends AppCompatActivity implements View.OnClickListen
     }
 
     private void ChangerMDP(){
-
         mdp1   = ((EditText)findViewById(R.id.ancienMDP)).getText().toString();  //Ancien mdp de l'utilisateur
         mdp2   = ((EditText)findViewById(R.id.NewMDP)).getText().toString();    //Nouveau mdp de l'utilisateur
         mdp3   = ((EditText)findViewById(R.id.ReNewMDP)).getText().toString();  //Repet nouveau mdp
@@ -56,15 +53,14 @@ public class ModifierMDP extends AppCompatActivity implements View.OnClickListen
             objetUtilisateur u = baseDeDonnees.getUserBylogin(login);
 
             if(u.getMDP().equals(mdp1)){ //On vérifie que l'ancien mdp est correct par rapport à la DB
-
                 if(mdp2.length() > 5 ) { // Longueur minimale
                     u.setMDP(mdp2);
                     baseDeDonnees.modifierUser(login, "mdp", mdp2);
                     baseDeDonnees.close();
                     Intent retourmenu = new Intent(ModifierMDP.this, Menu.class);
+                    retourmenu.putExtra("cléLogin",login);
                     startActivity(retourmenu);
                     Toast.makeText(getApplicationContext(), "Changement de mot de passe effectué avec succès", Toast.LENGTH_LONG).show();
-
                 }
                 else {  //Mot de passe pas assez long
                     Toast.makeText(ModifierMDP.this, "Veuillez choisir un mot de passe dépassant 5 charactères", Toast.LENGTH_LONG).show();
@@ -77,10 +73,5 @@ public class ModifierMDP extends AppCompatActivity implements View.OnClickListen
         else {  //Les nouveaux mots de passe ne correspeondent pas
             Toast.makeText(ModifierMDP.this, "Les 2 nouveaux mots de passe ne correspondent pas", Toast.LENGTH_LONG).show();
         }
-
-
     }
-
-
-
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/rInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insérer votre commentaire si après. Maximun 250 caractères."
+        android:typeface="monospace"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/rcom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/rInfo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insérer une note."
+        android:typeface="monospace"
+        android:layout_marginTop="5dp"
+        android:textSize="18dp"/>
+
+    <RatingBar
+        android:id="@+id/rRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <Button
+        android:id="@+id/validerReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#48d6e6"
+        android:typeface="monospace"
+        android:textSize="20dp"
+        android:layout_marginTop="5dp"
+        android:text="Enregistrer" />
+</LinearLayout>

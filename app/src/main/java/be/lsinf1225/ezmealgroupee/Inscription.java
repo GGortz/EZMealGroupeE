@@ -3,6 +3,7 @@ package be.lsinf1225.ezmealgroupee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,12 +11,15 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Inscription extends AppCompatActivity implements View.OnClickListener{
+    Toolbar toolbarInscription;
     private Button btnEnregistrer;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.inscription);
+        toolbarInscription = (Toolbar) findViewById(R.id.toolbarinscription);
+        toolbarInscription.setTitle("Inscription");
 
         Ajout_Listener_Bouttons();
     }
@@ -54,41 +58,47 @@ public class Inscription extends AppCompatActivity implements View.OnClickListen
         String uVille=ville.getText().toString();
         String uPays=pays.getText().toString();
 
-        if(uMDP.equals(uMDP2)) {//Si les MDP sont égaux
+        if(!uLogin.equals("")){  //On vérifie que le nom d'utilisateur n'est pas nul
 
-            objetUtilisateur login_deja_rentre = bdd.getUserBylogin(uLogin);
+            if(uMDP.equals(uMDP2)) {//Si les MDP sont égaux
 
-            if (login_deja_rentre == null) {  //Si le login n'est pas encore utilisé
-                if (uMDP.length() > 5) { // On checke que la longueur du mot de passe > 5 pour + de sécurité
-                    if (uJour > 31 || uJour < 1 || uMois < 1 || uMois > 12 || uAnnee > 2017 || uAnnee < 1930) {  //On vérifie le format de la date entrée
-                        Toast.makeText(Inscription.this, "Votre date de naissance n'est pas logique. Veuillez recommencer", Toast.LENGTH_LONG).show();
-                    } else {
-                        objetUtilisateur u = new objetUtilisateur();
-                        u.setLogin(uLogin);
-                        u.setMDP(uMDP);
-                        u.setSexe(uSexe);
-                        u.setJour(uJour);
-                        u.setMois(uMois);
-                        u.setAnnee(uAnnee);
-                        u.setVille(uVille);
-                        u.setPays(uPays);
-                        bdd.addUser(u);
+                objetUtilisateur login_deja_rentre = bdd.getUserBylogin(uLogin);
 
-                        Intent retouracceuil = new Intent(Inscription.this, Acceuil.class);
-                        startActivity(retouracceuil);
-                        Toast.makeText(Inscription.this, "L'inscription de " + uLogin + " est un succès", Toast.LENGTH_LONG).show();
+                if (login_deja_rentre == null) {  //Si le login n'est pas encore utilisé
+                    if (uMDP.length() > 5) { // On checke que la longueur du mot de passe > 5 pour + de sécurité
+                        if (uJour > 31 || uJour < 1 || uMois < 1 || uMois > 12 || uAnnee > 2017 || uAnnee < 1930) {  //On vérifie le format de la date entrée
+                            Toast.makeText(Inscription.this, "Votre date de naissance n'est pas logique. Veuillez recommencer", Toast.LENGTH_LONG).show();
+                        } else {  //Si tout est OK, on ajoute l'utilisateur dans la db
+                            objetUtilisateur u = new objetUtilisateur();
+                            u.setLogin(uLogin);
+                            u.setMDP(uMDP);
+                            u.setSexe(uSexe);
+                            u.setJour(uJour);
+                            u.setMois(uMois);
+                            u.setAnnee(uAnnee);
+                            u.setVille(uVille);
+                            u.setPays(uPays);
+                            bdd.addUser(u);
+
+                            Intent retouracceuil = new Intent(Inscription.this, Acceuil.class);
+                            startActivity(retouracceuil);
+                            Toast.makeText(Inscription.this, "L'inscription de " + uLogin + " est un succès", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    else {  //Si le mdp n'est pas convenable
+                        Toast.makeText(Inscription.this, "Veuillez choisir un mot de passe d'au moins 5 caractères", Toast.LENGTH_LONG).show();
                     }
                 }
-                else {
-                    Toast.makeText(Inscription.this, "Veuillez choisir un mot de passe d'au moins 5 caractères", Toast.LENGTH_LONG).show();
+                else {  //Si le nom d'utilisateur est déjà présent dans la db
+                    Toast.makeText(Inscription.this, uLogin + " est déja présent dans la base de données", Toast.LENGTH_LONG).show();
                 }
             }
-            else {
-                Toast.makeText(Inscription.this, uLogin + "est déja présent dans la base de données", Toast.LENGTH_LONG).show();
+            else{  //Si les mdp ne sont pas égaux
+                Toast.makeText(Inscription.this, "Les mots de passe ne sont pas égaux. Veuillez les revérifier.",Toast.LENGTH_LONG).show();
             }
         }
-        else{  //Si les mdp ne sont pas égaux
-            Toast.makeText(Inscription.this, "Les mots de passe ne sont pas égaux. Veuillez les revérifier.",Toast.LENGTH_LONG).show();
+        else { //Si le nom d'utilisateur est null
+            Toast.makeText(Inscription.this, "Votre nom d'utilisateur est null. Veuillez entrer un nom correct.",Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -3,6 +3,7 @@ package be.lsinf1225.ezmealgroupee;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,24 +14,22 @@ import android.widget.Toast;
  */
 
 public class SupprimerCompte extends AppCompatActivity implements View.OnClickListener{
-
+    Toolbar toolbarSupprimerCompte;
     private Button btnSupprimer;
     private String login;
 
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.supprimercompte);
+        toolbarSupprimerCompte = (Toolbar)findViewById(R.id.toolbarsupprimercompte);
+        toolbarSupprimerCompte.setTitle("Suppression de compte");
 
-        Bundle extras = getIntent().getExtras();
-        if(extras != null)
-            login = extras.getString("cleLogin");
+        login=Connexion.getUtilisateuractuel().getLogin();
 
         Ajout_Listener_Bouttons();
-
     }
 
     private void Ajout_Listener_Bouttons(){
-
         btnSupprimer = (Button) findViewById(R.id.btnSupprimer);
         btnSupprimer.setOnClickListener(this);
     }
@@ -58,13 +57,8 @@ public class SupprimerCompte extends AppCompatActivity implements View.OnClickLi
             }
             else
                 Toast.makeText(SupprimerCompte.this, "Le mot de passe n'est pas correct",Toast.LENGTH_LONG).show();
-
         }
         else
             Toast.makeText(getApplicationContext(), "Seriez-vous un robot? Réessayez!", Toast.LENGTH_SHORT).show();
-
-
-
-
     }
 }

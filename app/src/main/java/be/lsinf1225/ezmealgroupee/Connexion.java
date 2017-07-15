@@ -15,6 +15,7 @@ import android.content.Intent;
 public class Connexion extends AppCompatActivity implements View.OnClickListener{
     private String login;
     private String mdp;
+    public static objetUtilisateur utilisateuractuel;
     private Button btnConnection;
 
     protected void onCreate(Bundle savedInstanceState){
@@ -54,6 +55,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
             if(mdp.equals(u.getMDP())){ //Si les mdp sont egaux
                 Toast.makeText(getApplicationContext(), "Bienvenue " + u.getLogin() + " ! ", Toast.LENGTH_SHORT).show();
 
+                utilisateuractuel=bdd.getUserBylogin(login);  //Création d'un objetUtilisateur actuel qui est accesible de partout pour l'ajout de recette ou autres activités
                 Intent menu = new Intent(this, Menu.class);
                 menu.putExtra("cleLogin", u.getLogin());// On envoie le Login dans le menu principal pour le réutiliser après.
                 startActivity(menu);
@@ -65,6 +67,7 @@ public class Connexion extends AppCompatActivity implements View.OnClickListener
         }
     }
 
-
-
+    public static objetUtilisateur getUtilisateuractuel(){
+        return utilisateuractuel;
+    }
 }

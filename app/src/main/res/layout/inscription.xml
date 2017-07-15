@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,145 +8,93 @@
     tools:context="Inscription">
 
 
-    <TextView
-        android:id="@+id/lblInscription"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarinscription"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/inscription"
-        android:textSize="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="373dp"
-        android:layout_height="428dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblInscription"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarinscription"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <TextView
                 android:id="@+id/inscritpionLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:typeface="monospace"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:text="@string/login2"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtLogin"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="8"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/inscriptionMDP"
                 android:layout_width="wrap_content"
+                android:typeface="monospace"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/mot_de_passe"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtMDP"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="8"
+                android:inputType="textPassword" />
 
             <TextView
                 android:id="@+id/inscriptionMDP2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/r_peter_le_mot_de_passe"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtMDP2"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="8"
+                android:inputType="textPassword" />
 
             <TextView
                 android:id="@+id/inscriptionSexe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/sexe"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <Spinner
                 android:id="@+id/SpinSex"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="0dp"
-                android:entries="@array/SpinSexe"/>
+                android:entries="@array/SpinSexe" />
 
 
             <TextView
@@ -154,104 +102,67 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/jour_de_naissance"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtJour"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="4"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/inscriptionMois"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/mois_de_naissance"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtMois"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="4"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/inscriptionAnnee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/annee_de_naissance"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtAnnee"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="5"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/inscriptionVille"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:typeface="monospace"
                 android:text="@string/ville"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtVille"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="8dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:ems="10" />
 
             <TextView
                 android:id="@+id/inscriptionPays"
@@ -259,41 +170,28 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/pays"
-                android:textSize="20dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="33dp" />
+                android:typeface="monospace"
+                android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/txtPays"
-                android:layout_width="200dp"
-                android:layout_height="43dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="0dp"
-                android:layout_marginRight="0dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                tools:layout_editor_absoluteY="164dp" />
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/inscriptionEnregistrer"
                 android:layout_width="wrap_content"
-                android:layout_height="68dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="40dp"
+                android:backgroundTint="#48d6e6"
+                android:layout_marginTop="35dp"
+                android:typeface="monospace"
                 android:text="@string/enter"
-                android:textSize="40dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
-
+                android:textSize="40dp" />
 
         </LinearLayout>
     </ScrollView>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

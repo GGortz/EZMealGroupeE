@@ -5,4 +5,17 @@ package be.lsinf1225.ezmealgroupee;
  */
 
 public class objetIngredient {
+    private String ingredient;
+
+    objetIngredient(String nom){
+        this.ingredient=nom;
+    }
+
+    public String getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
 }

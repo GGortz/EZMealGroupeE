@@ -22,19 +22,13 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
     private Button bCategories;
     private Button bCatalogue;
     private Button bDeconnexion;
-    private Button bModifier;
-    private Button bSupprimer;
-    //private Button bAjout;
+    private Button bAjout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-        Bundle extras = getIntent().getExtras();
-        if(extras!=null){
-            login=extras.getString("cleLogin");
-        }
-
+        login=Connexion.getUtilisateuractuel().getLogin();
         Ajout_Listener_Bouttons();
     }
 
@@ -57,14 +51,8 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
         bDeconnexion=(Button)findViewById(R.id.bDeconnexion);
         bDeconnexion.setOnClickListener(this);
 
-        bModifier=(Button)findViewById(R.id.bModifierMDP);
-        bModifier.setOnClickListener(this);
-
-        bSupprimer=(Button)findViewById(R.id.bSupprimerCompte);
-        bSupprimer.setOnClickListener(this);
-
-       //bAjout=(Button)findViewById(R.id.bAjoutRecette);
-       //bAjout.setOnclickListener(this);
+       bAjout=(Button)findViewById(R.id.bAjoutRecette);
+       bAjout.setOnClickListener(this);
     }
 
     @Override
@@ -93,35 +81,23 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 startActivity(deconnexion);
                 break;
 
-            case R.id.bModifierMDP:
-                Intent modMDP = new Intent(Menu.this, ModifierMDP.class);
-                modMDP.putExtra("cleLogin",login);
-                startActivity(modMDP);
-                break;
-
-            case R.id.bSupprimerCompte:
-                Intent supprimer = new Intent(Menu.this, SupprimerCompte.class);
-                supprimer.putExtra("cleLogin",login);
-                startActivity(supprimer);
-                break;
-
             case R.id.bCatalogue:
-                Intent catalogue = new Intent(Menu.this, Acceuil.class);
-                catalogue.putExtra("cleLogin",login);
+                Intent catalogue = new Intent(Menu.this, Catalogue.class);
+                //catalogue.putExtra("cleLogin",login);
                 startActivity(catalogue);
                 break;
 
             case R.id.bCategories:
-                Intent categories = new Intent(Menu.this, Acceuil.class);
+                Intent categories = new Intent(Menu.this, Categorie.class);
                 categories.putExtra("cleLogin",login);
                 startActivity(categories);
                 break;
 
-            //case R.id.bAjout:
-              //  Intent ajoutrecette = new Intent(Menu.this, AjoutRecette.class);
-              //  ajoutrecette.putExtra("cleLogin",login);
-              //  startActivity(ajoutrecette);
-              //break;
+            case R.id.bAjoutRecette:
+                Intent ajoutrecette = new Intent(Menu.this, AddRecette.class);
+                ajoutrecette.putExtra("cleLogin",login);
+                startActivity(ajoutrecette);
+              break;
         }
     }
 }

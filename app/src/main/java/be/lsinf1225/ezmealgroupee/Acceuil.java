@@ -5,6 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.content.Context;
+
+
+/**
+ * Created by Gaetan on 05/07/2017.
+ */
 
 public class Acceuil extends AppCompatActivity implements View.OnClickListener {
 

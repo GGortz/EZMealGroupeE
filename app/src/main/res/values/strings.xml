@@ -28,11 +28,72 @@
     <string name="nouveau_mot_de_passe">Nouveau mot de passe :</string>
     <string name="modifier">Modifier</string>
     <string name="supp_compte">Supprimer compte</string>
+    <string name="suppression_de_compte">Suppression de compte</string>
+    <string name="sous_cat_gories">Sous-catégories</string>
+    <string name="recherche_simple">Recherche simple</string>
+    <string name="recherchersimple">Rechercher</string>
+    <string name="indiquez_un_ingredient_ici">Indiquez un ingredient ici</string>
+    <string name="les_ingr_dients_commencent_par_une_majuscule_et_sont_toujours_au_singulier">Les ingrédients sont toujours au singulier</string>
+    <string name="cette_interface_vous_permet_de_rechercher_une_liste_de_recette_partir_d_un_ingr_dient">Cette interface vous permet de rechercher une liste de recettes à partir d\'un ingrédient</string>
+    <string name="recherche_avanc_e">Recherche avancée</string>
+    <string name="difficult">Difficulté :</string>
+    <string name="co_t">Coût :</string>
+    <string name="type">Type :</string>
+    <string name="nombres_de_couverts">Nombres de couverts :</string>
+    <string name="couverts">couverts</string>
+    <string name="temps_de_pr_paration_entre">Temps de préparation entre</string>
+    <string name="et">et</string>
+    <string name="temps_de_cuissons_entre">Temps de cuissons entre</string>
+    <string name="recette">Recette</string>
+    <string name="profil_de_l_utilisateur">Profil de l\'utilisateur</string>
+    <string name="modification_du_mot_de_passe">Modification du mot de passe</string>
+    <string name="ingr_dients">Ingrédients</string>
+    <string name="cat_gories">Catégories</string>
+    <string name="catalogue">Catalogue</string>
 
 
     <string-array name="SpinSexe">
         <item>Homme</item>
         <item>Femme</item>
+    </string-array>
+
+    <string-array name="SpinDifficulte">
+        <item>Facile</item>
+        <item>Moyen</item>
+        <item>Difficile</item>
+    </string-array>
+
+    <string-array name="SpinCout">
+        <item>Bon marché</item>
+        <item>Peu élevé</item>
+        <item>Elevé</item>
+    </string-array>
+
+    <string-array name="SpinType">
+        <item>Entrée</item>
+        <item>Plat</item>
+        <item>Dessert</item>
+    </string-array>
+
+    <string-array name="SpinDifficulte2">
+        <item>Facile</item>
+        <item>Moyen</item>
+        <item>Difficile</item>
+        <item>N\'importe</item>
+    </string-array>
+
+    <string-array name="SpinCout2">
+        <item>Bon marché</item>
+        <item>Peu élevé</item>
+        <item>Elevé</item>
+        <item>N\'importe</item>
+    </string-array>
+
+    <string-array name="SpinType2">
+        <item>Entrée</item>
+        <item>Plat</item>
+        <item>Dessert</item>
+        <item>N\'importe</item>
     </string-array>
 
 </resources>

@@ -24,6 +24,16 @@
         <activity android:name=".Profil"></activity>
         <activity android:name=".ModifierMDP"></activity>
         <activity android:name=".SupprimerCompte"></activity>
+        <activity android:name=".Catalogue"></activity>
+        <activity android:name=".Categorie"></activity>
+        <activity android:name=".SousCategorie"></activity>
+        <activity android:name=".Ingredient"></activity>
+        <activity android:name=".Recette"></activity>
+        <activity android:name=".ResultatRechercheAvancee"></activity>
+        <activity android:name=".Review"></activity>
+        <activity android:name=".AddRecette"></activity>
+        <activity android:name=".AddIngredient"></activity>
+        <activity android:name=".AddEtape"></activity>
     </application>
 
 </manifest>

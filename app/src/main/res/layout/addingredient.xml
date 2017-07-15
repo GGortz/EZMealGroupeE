@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarajoutingredient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbarajoutingredient"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:typeface="monospace"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Ingrédient" />
+
+            <EditText
+                android:id="@+id/addingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:typeface="monospace"
+                android:layout_height="wrap_content"
+                android:text="Quantité" />
+
+            <EditText
+                android:id="@+id/addquantite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="8"
+                android:hint="ex : 200 g"
+                android:inputType="text"
+                android:textColorHint="#c9c9c9" />
+
+            <Button
+                android:id="@+id/btnaddingre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:layout_gravity="center"
+                android:backgroundTint="#48d6e6"
+                android:text="Ajouter un ingrédient" />
+
+            <Button
+                android:id="@+id/btnnext1"
+                android:layout_width="195dp"
+                android:typeface="monospace"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#48d6e6"
+                android:text="Passer aux étapes" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".objetIngredient"
+    tools:context=".Catalogue"
     android:paddingBottom="0dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
@@ -12,10 +12,10 @@
 
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/toolbarCatalogue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="#007bff"
         android:minHeight="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -28,10 +28,10 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView3"
+        android:id="@+id/catalogueRecette"
         tools:layout_editor_absoluteY="56dp"
         tools:layout_editor_absoluteX="0dp"
-        android:layout_below="@+id/toolbar3"
+        android:layout_below="@+id/toolbarCatalogue"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="11dp"

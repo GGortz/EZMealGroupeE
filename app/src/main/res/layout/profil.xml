@@ -1,70 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarprofil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#007bff"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:layout_weight="1"
-            android:text="CHANGER CE LAYOUT PR PLUS BEAU"
-            android:textAlignment="center"
-            android:textColor="#44a7f5"
-            android:textSize="30sp"
-            android:textStyle="bold|italic" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1">
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1">
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1">
-
-        </RelativeLayout>
+        android:layout_below="@+id/toolbarprofil"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <TextView
             android:id="@+id/profilLogin"
-            android:layout_width="204dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:ems="10"
             android:hint="Login"
             android:inputType="textPersonName"
@@ -73,45 +41,50 @@
 
         <TextView
             android:id="@+id/profilSexe"
-            android:layout_width="244dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginTop="5dp"
             android:hint="Jour"
             android:inputType="number"
             android:text="S" />
 
         <TextView
             android:id="@+id/profilJour"
-            android:layout_width="260dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginTop="5dp"
             android:hint="Mois"
             android:inputType="number"
             android:text="J" />
 
         <TextView
             android:id="@+id/profilMois"
-            android:layout_width="316dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginTop="5dp"
             android:hint="Annee"
             android:inputType="number"
             android:text="M" />
 
         <TextView
             android:id="@+id/profilAnnee"
-            android:layout_width="523dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginTop="5dp"
             android:hint="Pays"
             android:inputType="textPersonName"
             android:text="A" />
 
         <TextView
             android:id="@+id/profilPays"
-            android:layout_width="304dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_marginTop="5dp"
             android:hint="Ville"
             android:inputType="textPersonName"
             android:text="P" />
@@ -119,8 +92,7 @@
         <TextView
             android:id="@+id/profilVille"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Ville"
             android:inputType="textPersonName"
@@ -129,19 +101,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bModifierMDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:typeface="monospace"
+                android:backgroundTint="#48d6e6"
+                android:onClick="onBtnClick"
+                android:text="Modifier MDP" />
+
+            <Button
+                android:id="@+id/bSupprimerCompte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:typeface="monospace"
+                android:backgroundTint="#48d6e6"
+                android:onClick="onBtnClick"
+                android:text="Supprimer Compte" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    </ScrollView>
-
-</LinearLayout>
+</RelativeLayout>
