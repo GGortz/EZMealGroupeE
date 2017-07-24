@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -71,8 +72,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case R.id.bRecherche:
-                Intent recherche = new Intent(Menu.this, RechercheSimple.class);
-                startActivity(recherche);
+                RechercherSimplement();
                 break;
 
             case R.id.bDeconnexion:
@@ -100,4 +100,22 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
               break;
         }
     }
+
+    private void RechercherSimplement() {
+        EditText Ingr = (EditText) findViewById(R.id.RechercheSimpleMenu);
+        String Ingredient = Ingr.getText().toString();
+
+        BaseDeDonnees bdd = new BaseDeDonnees(this);
+        objetIngredient ingredientexistant = bdd.verifIngredient(Ingredient);
+
+        if(ingredientexistant==null){
+            Toast.makeText(this, "L'ingrédient recherché n'existe pas dans la base de données", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Intent resultat = new Intent(Menu.this, Catalogue.class);
+            resultat.putExtra("ingrédient", Ingredient);
+            startActivity(resultat);
+        }
+    }
+
 }

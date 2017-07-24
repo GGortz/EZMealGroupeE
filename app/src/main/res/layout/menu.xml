@@ -6,136 +6,162 @@
     android:layout_height="match_parent"
     tools:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/aretape"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nom_appli"
-        android:textSize="80dp"
-        android:typeface="monospace"
-        android:textColor="#007bff"
-        android:textStyle="bold"
-        android:layout_below="@+id/tableRow2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
-
-    <Button
-        android:id="@+id/bDeconnexion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_weight="1"
-        android:background="@android:drawable/ic_lock_lock"
-        android:backgroundTint="#48d6e6"
-        android:fontFamily="sans-serif-smallcaps"
-        android:onClick="onBtnClick"
-        android:text="déconnexion"
-        android:textColor="#000000"
-        android:typeface="monospace" />
-
     <TableRow
-        android:id="@+id/tableRow"
+        android:id="@+id/tableRow4"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_above="@+id/bDeconnexion"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:baselineAligned="false">
-
-        <Button
-            android:id="@+id/bProfil"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Mon profil"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
-
-        <Button
-            android:id="@+id/bAjoutRecette"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Ajout recette"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/tableRow2"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="11dp">
 
-        <Button
-            android:id="@+id/bCatalogue"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Catalogue recettes"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
-
-        <Button
-            android:id="@+id/bCategories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Catégories"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/aretape"
-        android:layout_marginTop="33dp">
+        <EditText
+            android:id="@+id/RechercheSimpleMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:ems="12"
+            android:hint="Recherche simple"
+            android:inputType="textPersonName"
+            android:textColor="#abaaaa"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/bRecherche"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Recherche"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
+            android:background="@mipmap/s"
+            android:onClick="onBtnClick" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/aretape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nom_appli"
+        android:textColor="#007bff"
+        android:textSize="65dp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tableRow4"
+        android:layout_centerHorizontal="true" />
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/aretape"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/bCatalogue"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/cata"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="115dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bCategories"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/cate"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/tableRow2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/bRechercheAvancee"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#48d6e6"
-            android:fontFamily="sans-serif-smallcaps"
-            android:onClick="onBtnClick"
-            android:text="Recherche avancée"
-            android:textColor="#FFFFFF"
-            android:typeface="monospace" />
+            android:background="@mipmap/ra"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="115dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bAjoutRecette"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/ajout"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:baselineAligned="false"
+        android:layout_below="@+id/tableRow3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/bProfil"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/p"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bDeconnexion"
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/deco"
+            android:onClick="onBtnClick" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="match_parent" />
 
     </TableRow>
 
