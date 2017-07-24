@@ -119,3 +119,19 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
     }
 
 }
+
+
+/*
+Image provenant de
+-Icone EZMeal http://icon-icons.com/icons2/587/PNG/512/carrot_icon-icons.com_55323.png
+-Icone Catalogue https://cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png
+-Icone Recherche Simple https://openclipart.org/image/2400px/svg_to_png/58717/1273014462.png
+-Icone Recherche Avancée http://www.freeiconspng.com/uploads/search-engine-optimization-icon-7.png
+-Icone Categorie Icon made by Freepik from www.flaticon.com https://www.flaticon.com/free-icon/category_13034
+-Icone Déconnexion http://rightscribe.webstarts.com/uploads/student_logout1.png
+-Icone Profil https://cdn2.iconfinder.com/data/icons/business-office-icons/256/ID_Card-512.png
+-Icone Ajout Recette Icon made by Freepik from www.flaticon.com  https://www.flaticon.com/free-icon/notebook_120099
+
+
+
+ */

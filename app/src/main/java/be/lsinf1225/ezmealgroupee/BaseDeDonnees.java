@@ -586,8 +586,10 @@ public class BaseDeDonnees extends SQLiteOpenHelper{
             db.execSQL(Recette);
             String RecetteIngredient = "DROP TABLE IF EXISTS Recetteingredient";
             db.execSQL(RecetteIngredient);
-            String RecetteEtape = "DRop TABLE IF EXISTS Recetteetape";
+            String RecetteEtape = "DROP TABLE IF EXISTS Recetteetape";
             db.execSQL(RecetteEtape);
+            String Reviews = "DROP TABLE IF EXISTS Reviews";
+            db.execSQL(Reviews);
 
             onCreate(db);
         }
