@@ -18,7 +18,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbajoutrecette">
+        android:layout_below="@+id/toolbajoutrecette"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -137,14 +140,14 @@
                     android:layout_height="wrap_content"
                     android:typeface="monospace"
                     android:textSize="15dp"
-                    android:layout_weight="1"
+                    android:layout_weight="0.3"
                     android:text="Temps de cuisson : " />
 
                 <EditText
                     android:id="@+id/ajoutTcuiss"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:inputType="number" />
             </LinearLayout>
 
@@ -160,14 +163,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="14dp"
                     android:typeface="monospace"
-                    android:layout_weight="1"
+                    android:layout_weight="0.3"
                     android:text="Temps de préparation : " />
 
                 <EditText
                     android:id="@+id/ajoutTprep"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:inputType="number" />
 
             </LinearLayout>
@@ -184,14 +187,15 @@
                     android:layout_height="wrap_content"
                     android:textSize="15dp"
                     android:typeface="monospace"
-                    android:layout_weight="1"
+                    android:layout_weight="0.3"
                     android:text="Nombre de couverts : " />
 
                 <EditText
                     android:id="@+id/ajoutNbrcouv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
+                    android:ems="5"
                     android:inputType="number" />
             </LinearLayout>
 
