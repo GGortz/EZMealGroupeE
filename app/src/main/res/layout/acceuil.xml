@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/fond"
-    tools:context="be.lsinf1225.ezmealgroupee.Acceuil">
+    android:backgroundTintMode="add">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="2"
+            android:orientation="vertical"
+            tools:context="be.lsinf1225.ezmealgroupee.Acceuil">
 
-    <TextView
-        android:id="@+id/lblNom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nom_appli"
-        android:textSize="80sp"
-        android:typeface="monospace"
-        android:textColor="#007bff"
-        android:textStyle="bold"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/lblNom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:text="@string/nom_appli"
+                android:textColor="#007bff"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
 
-    <Button
-        android:id="@+id/BtnInscription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="35sp"
-        android:layout_marginTop="90dp"
-        android:text="@string/inscription"
-        android:typeface="monospace"
-        android:backgroundTint="#48d6e6"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/lblNom" />
+            <Button
+                android:id="@+id/BtnInscription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNom"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:backgroundTint="#48d6e6"
+                android:text="@string/inscription"
+                android:textSize="35sp"
+                android:typeface="monospace" />
 
-    <Button
-        android:id="@+id/BtnConnexion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BtnInscription"
-        android:typeface="monospace"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:backgroundTint="#48d6e6"
-        android:text="@string/connexion"
-        android:textSize="35sp" />
+            <Button
+                android:id="@+id/BtnConnexion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BtnInscription"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#48d6e6"
+                android:text="@string/connexion"
+                android:textSize="35sp"
+                android:typeface="monospace" />
 
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
